@@ -1,2 +1,37 @@
-# murdoku-treasure-notebook
-Offline Murdoku Treasure Hunt notebook: bilingual clues, colored initials, drag annotations, and notes. 解压后双击 HTML 即可使用。
+# Murdoku · 寻宝手记
+
+将 The Treasure Hunt PDF 变成可离线使用的推理地图，方便自行标注与备注。
+
+## 下载后直接开始
+
+1. 在本仓库点击 **Code → Download ZIP**，或下载 Releases 中的 `murdoku-treasure-notebook.zip`。
+2. 解压压缩包。
+3. 双击 `index.html`，使用 Chrome、Edge 或 Firefox 打开。
+
+**无需安装、构建、启动服务器或联网。** 地图、人物头像和物体图例已嵌入 HTML。旁边的 PDF 和 PNG 用于查看原始参考资料，请与 HTML 保存在一起。
+
+## 使用方式
+
+- 放置人物：选中人物，点击格子确定位置。
+- 候选标注：一格可以记录多个人物，以不同颜色的加粗首字母表示。
+- 标记为空：添加或取消 ×。
+- 清除标注：移除人物、候选或 ×，保留文字备注。
+- 按住左键拖动：连续添加或移除候选、标记为空或清除多个格子。起点已有选中候选或 × 时整笔移除，否则整笔添加。
+- 撤销 / 重做：每笔拖动只记为一次操作。快捷键 Ctrl+Z、Ctrl+Y / Ctrl+Shift+Z。
+- 查看 / 备注：逐格记录推理；独立的推理笔记用于整体分析。
+- 线索勾选、中英文对照、地图物体图例、缩放、打印、深浅主题。
+
+进度自动保存到当前浏览器，并可通过「导出进度 / 导入进度」备份或迁移。不同浏览器不会共享进度，建议定期导出。这里不提供答案或答案判定。
+
+## 文件
+
+- `index.html`：完整可离线运行的互动网页。
+- `murdoku.pdf`：原始题目。
+- `clues.png`、`map-reference.png`：原始人物线索与地图参考。
+- `使用说明.txt`：中文使用说明。
+- `CHANGELOG.md`：版本说明。
+- `NOTICE.md`：原始题目及美术署名。
+
+## 署名
+
+原始题目及人物、地图、美术素材来自 Murdoku / The Treasure Hunt，作者与美术署名见随附 PDF 与 `NOTICE.md`。本项目是辅助标注工具。中文用于辅助阅读，英文原文同时展示。
