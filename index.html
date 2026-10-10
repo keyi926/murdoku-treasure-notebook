@@ -37,7 +37,7 @@ const englishClues=[
 ];
 const personColors=['#b82f29','#97420b','#847000','#467619','#00684d','#007b80','#146294','#3349b4','#6138ad','#903a94','#b32c65','#783b21','#4e5b18','#32794a','#006d69','#245580','#505496','#754273','#a44459','#985312','#546c35','#496569','#795887','#a26c08'];
 const objectNames=[['火堆','fire'],['树','tree'],['花朵','flowers'],['鲨鱼','shark'],['袋子','sack'],['猪','pig'],['墓碑','tombstone'],['木箱','crate'],['绳索','rope'],['木桶','barrel'],['书架','shelf'],['灌木','shrub'],['桌子','table'],['巨石','boulder'],['床','bed'],['椅子','chair'],['吊床','hammock'],['门前两格','in front of the door']];
-const $=id=>document.getElementById(id), KEY='murdoku-treasure-notebook-v1';
+const $=id=>document.getElementById(id), KEY='murdoku-treasure-notebook-public-v1';
 const fresh=()=>({version:1,cells:Array.from({length:576},()=>({person:null,candidates:[],empty:false,note:''})),done:Array(24).fill(false),notes:'',autoX:false,dark:false});
 let state=fresh(),undo=[],redo=[],mode='place',person=0,selected=-1,zoom=100,storageOK=true;
 function valid(s){return s&&s.version===1&&Array.isArray(s.cells)&&s.cells.length===576&&s.cells.every(c=>c&&((c.person===null)||(Number.isInteger(c.person)&&c.person>=0&&c.person<24))&&Array.isArray(c.candidates)&&c.candidates.every(n=>Number.isInteger(n)&&n>=0&&n<24)&&typeof c.empty==='boolean'&&typeof c.note==='string')&&Array.isArray(s.done)&&s.done.length===24&&s.done.every(v=>typeof v==='boolean')&&typeof s.notes==='string'&&typeof s.autoX==='boolean'&&typeof s.dark==='boolean'}
